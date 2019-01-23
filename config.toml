@@ -2,7 +2,6 @@
 baseurl = "/" #without ending slash
 languageCode = "en-us"
 #defaultContentLanguage = "en"
-title = "Jasmine Rimal"
 theme = "identity-learn"
 themesDir = "themes"
 metaDataFormat = "yaml"
@@ -23,6 +22,7 @@ disqusShortname = "bpharm"
   disableNextPrev = false
   showVisitedLinks = true
   disableLanguageSwitchingButton = true
+  siteTitle = "Jasmine Rimal"
 
 [outputs]
     home = [ "HTML", "RSS", "JSON"] 
