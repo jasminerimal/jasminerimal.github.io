@@ -1,48 +1,35 @@
 # Site settings
 baseurl = "/" #without ending slash
 languageCode = "en-us"
+#defaultContentLanguage = "en"
 title = "Jasmine Rimal"
-theme = "identity"
+theme = "identity-learn"
 themesDir = "themes"
-
-# Disable unnecessary kinds
-disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT", "404"]
-
-# Enter your tracking code to enable Google Analytics
+metaDataFormat = "yaml"
+#defaultContentLanguageInSubdir= true
 #googleAnalytics = "UA-XXXXX-Y"
+disqusShortname = "bpharm"
+#disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap", "robotsTXT", "404"]
 
 [params]
+  editURL = "https://github.com/jasminerimal/jasminerimal.github.io/edit/deploy/content/"
+  uploadURL = "https://github.com/jasminerimal/jasminerimal.github.io/upload/master/content/"
+  description = "Jasmine's Website"
+  repoView = "https://github.com/jasminerimal/jasminerimal.github.io"
+  repoStar = "https://github.com/jasminerimal/jasminerimal.github.io"
+  repoFork = "https://github.com/jasminerimal/jasminerimal.github.io/fork"
+  author = "Jasmine Rimal"
+  disableBreadcrumb = false
+  disableNextPrev = false
+  showVisitedLinks = true
+  disableLanguageSwitchingButton = true
 
-  # Images settings
-  # Icons, backgrounds and avatars folders are placed in theme's static/images folder.
-  # You may place your images in corresponding folders and then set only filenames below to
-  # change page's appearance
+[outputs]
+    home = [ "HTML", "RSS", "JSON"] 
 
-  # Site icons
-  favicon_ico = "favicon.ico"
-  favicon_ico_sizes = "16x16 32x32"
-  appleicon = "apple.png"
-
-  # Additional options to supplement icons served
-  #favicon_png = "favicon.png"
-  #favicon_png_sizes = "96x96"
-  #favicon_svg = "favicon.svg"
-
-  # Link custom assets relative to /static
-  #custom_js  = [""]
-  #custom_css = ["background.css", "icons.css"]
-
-  # Customization switches
-  # Overwrite FontAwesome: see icons.css
-  #custom_icons = true
-  # Overwrite background: see background.css
-  #custom_background = true
-
-  # Personal data
+##IdentityParams
   [params.personal]
-    # If name is not set, author is used
     name = "Jasmine Rimal"
-    # Avatars can be written to images/avatars/
     avatar = "jas.png"
     position = "Medical Student"
     livesIn = "[Lalitpur, Nepal](#https://www.google.com.np/maps/place/Thasikhel,+Patan)"
@@ -52,8 +39,6 @@ disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap",
         "[AVM](https://en.wikipedia.org/wiki/Adarsha_Vidya_Mandir)ite and [DAV](http://www.davcollege.edu.np/)ian"
       ]
     biography = """Jasmine Rimal is a simple girl, enjoying the simple things in life. With a passion for pharmacy, this medical student takes interest in health science pertaining to safe medical dispensation"""
-
-  # Contact form settings
 
   [params.contact]
     # Since this template is static, the contact form uses www.formspree.io as a
@@ -78,7 +63,7 @@ disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap",
     #postURL = "https://example.com/mailout/"
 
     enable = false
-    title = "Touch Me!"
+    title = "Want to ask me something specific?"
     namePlaceholder = "Name"
     emailPlaceholder = "Email"
     messagePlaceholder = "Message"
@@ -87,41 +72,39 @@ disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap",
     error = "Message could not be send. Please contact us at "
 
     # Google invisible captcha
-    #[params.contact.captcha]
-    #  sitekey = ""
+      #[params.contact.captcha]
+      #  sitekey = ""
 
 
-    # Add optional form fields to identify contact forms.
-    #[[params.contact.fields.hidden]]
-    #  name = "someID"
-    #  value = "example.com"
+      # Add optional form fields to identify contact forms.
+      #[[params.contact.fields.hidden]]
+      #  name = "someID"
+      #  value = "example.com"
 
-    #[[params.contact.fields.hidden]]
-    # Special values for name such as "page" and "site" will be autofilled
-    #  name = "page"
+      #[[params.contact.fields.hidden]]
+      # Special values for name such as "page" and "site" will be autofilled
+      #  name = "page"
 
   # Social settings
-  # You may change these with your social links or add others
+    [[params.social]]
+      title = "Github"
+      icon = "fa-github"
+      link = "https://github.com/jasminerimal/"
+      target = "_blank"
 
-  [[params.social]]
-    title = "Github"
-    icon = "fa-github"
-    link = "https://github.com/jasminerimal/"
-    target = "_blank"
+    [[params.social]]
+      title = "Instagram"
+      icon = "fa-instagram"
+      link = "https://www.instagram.com/jasmine_rimal/"
+      target = "_blank"
 
-  [[params.social]]
-    title = "Instagram"
-    icon = "fa-instagram"
-    link = "https://www.instagram.com/jasmine_rimal/"
-    target = "_blank"
+    [[params.social]]
+      title = "Facebook"
+      icon = "fa-facebook"
+      link = "https://www.facebook.com/JasmineRimal/"
+      target = "_blank"
 
-  [[params.social]]
-    title = "Facebook"
-    icon = "fa-facebook"
-    link = "https://www.facebook.com/JasmineRimal/"
-    target = "_blank"
-
-  # Footer settings
+# Footer settings
   [params.footer]
     # If copyright is not set, author is used
     copyright = "Jasmine Rimal"
@@ -140,10 +123,37 @@ disableKinds = ["page", "section", "taxonomy", "taxonomyTerm", "RSS", "sitemap",
     link = "https://github.com/jasminerimal/jasminerimal.github.io"
 
   # Optional piwik tracking
-  #[params.analytics.piwik]
-  #  URL = "https://stats.example.com"
-  #  ID = "42"
-  #  # Track all subdomains with "*.example.com"
-  #  domain = "www.example.com"
-  #  # Optional integrity check hash
-  #  hash = "sha512-RfeD0pacGTqy9m7U6PgehQfS4cc7SIt+e+P+H5e848kEvB/RW84CUGO3O4O3LNbxjevym6KPUZ8muPsMrI8WIw=="
+    #[params.analytics.piwik]
+    #  URL = "https://stats.example.com"
+    #  ID = "42"
+    #  # Track all subdomains with "*.example.com"
+    #  domain = "www.example.com"
+    #  # Optional integrity check hash
+    #  hash = "sha512-RfeD0pacGTqy9m7U6PgehQfS4cc7SIt+e+P+H5e848kEvB/RW84CUGO3O4O3LNbxjevym6KPUZ8muPsMrI8WIw=="
+
+[Languages]
+
+  [Languages.en]
+  title = "Home"
+  weight = 1
+  languageName = "English"
+
+  [[Languages.en.menu.shortcuts]]
+  name = "<i class='fa fa-home'></i> Homepage"
+  url = "../.."
+  weight = 20
+
+  [[Languages.en.menu.shortcuts]]
+  name = "<i class='fa fa-code-branch'></i> Contribute"
+  url = "how-to-contribute"
+  weight = 30
+
+  [[Languages.en.menu.shortcuts]]
+  name = "<i class='fa fa-bullhorn'></i> Credits"
+  url = "credits"
+  weight = 40
+
+  [[Languages.en.menu.shortcuts]]
+  name = "<i class='fa fa-file-signature'></i> Disclaimer"
+  url = "disclaimer"
+  weight = 50
