@@ -104,6 +104,13 @@ disqusShortname = "bpharm"
       link = "https://www.facebook.com/JasmineRimal/"
       target = "_blank"
 
+    [[params.social]]
+      title = "Bpharm"
+      icon = "fa-book"
+      # icon = "fa-medkit"
+      link = "/bpharm"
+      #target = "_blank"
+
 # Footer settings
   [params.footer]
     # If copyright is not set, author is used
