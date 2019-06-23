@@ -23,6 +23,7 @@ disqusShortname = "bpharm"
   showVisitedLinks = true
   disableLanguageSwitchingButton = true
   siteTitle = "Jasmine Rimal"
+  sbaseurl = "https://jasminerimal.com.np" #to replace BaseURL instances for subpage shortcodes
 
 [outputs]
     home = [ "HTML", "RSS", "JSON"] 
